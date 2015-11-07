@@ -1,7 +1,7 @@
 Kod java z "ramka menu" programu. 
 
 
-*Made by__Natalia__*
+*Made by __Natalia__*
 
 
-`` wiem, że liche ;) ``
+`` wiem, że liche #szaluNieMa;) ``
