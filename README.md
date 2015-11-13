@@ -12,6 +12,7 @@ Wersja 0.1-> ramka do programu
 
 *edit. 13 XI 2015*
 Utworzylam programy do wysylanie e-maili. 
+
 Aby program dzialal nalezy:
 + posiadac konto na gmail ;)
 + pobrac biblioteke/ rozszerzenie [JavaMail] (http://www.oracle.com/technetwork/java/index-138643.html) 
