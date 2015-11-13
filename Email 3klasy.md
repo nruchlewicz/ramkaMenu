@@ -1,3 +1,5 @@
+_Asia Powinna być dumna!_
+
 #CLASS OKNO
 
 	import javax.mail.MessagingException;
@@ -57,64 +59,53 @@
 	
 #CLASS SendMail
 
-package xyz;
 
-import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-public class SendMail {
+	import java.util.Properties;
+	import javax.mail.Message;
+	import javax.mail.MessagingException;
+	import javax.mail.Session;
+	import javax.mail.Transport;
+	import javax.mail.internet.InternetAddress;
+	import javax.mail.internet.MimeMessage;
+	public class SendMail {
 	 
-private static final String HOST = "smtp.gmail.com";
-private static final int PORT = 465;
-// Adres email osby która wysyła maila
-private static final String FROM = "wybierznazwe.natalia@gmail.com"; 
-// Hasło do konta osoby która wysyła maila podajemy w konsoli
+		private static final String HOST = "smtp.gmail.com";
+		private static final int PORT = 465;
+		// Adres email osby która wysyła maila
+		private static final String FROM = "wybierznazwe.natalia@gmail.com"; 
+		// Hasło do konta osoby która wysyła maila podajemy w konsoli
+		// Adres email osoby do której wysyłany jest mail
+		private static final String TO = ("nataliaaaxd@wp.pl");
+		// Temat wiadomości
+		private static final String SUBJECT = "Java Witaj:)";
+		// Treść wiadomości
+		private static final String CONTENT = "Witaj świecie, działa to czy nie ?:)";
+		String password = Okno.getPassword(); //pobranie password z klasy Okno
+		@SuppressWarnings("resource")
+		public void send() throws MessagingException {
+			 Properties props = new Properties();
+			 props.put("mail.transport.protocol", "smtps");
+			 props.put("mail.smtps.auth", "true");
+ 			// Inicjalizacja sesji
+ 			Session mailSession = Session.getDefaultInstance(props);
+			 // ustawienie debagowania, jeśli nie chcesz oglądać logów to usuń
+ 			// linijkę poniżej lub zmień wartość na false
+			 mailSession.setDebug(true);
 
-// Adres email osoby do której wysyłany jest mail
-private static final String TO = ("nataliaaaxd@wp.pl");
-// Temat wiadomości
-private static final String SUBJECT = "Java Witaj:)";
-// Treść wiadomości
-private static final String CONTENT = "Witaj świecie, działa to czy nie ?:)";
+			 // Tworzenie wiadomości email
+			 MimeMessage message = new MimeMessage(mailSession);
+			 message.setSubject(SUBJECT);
+ 			message.setContent(CONTENT, "text/plain; charset=ISO-8859-2");
+ 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(TO));
 
-String password = Okno.getPassword(); //pobranie password z klasy Okno
+ 			Transport transport = mailSession.getTransport();
+			 transport.connect(HOST, PORT, FROM, password);
 
-@SuppressWarnings("resource")
-
-
-public void send() throws MessagingException {
-
- Properties props = new Properties();
- props.put("mail.transport.protocol", "smtps");
- props.put("mail.smtps.auth", "true");
-
- // Inicjalizacja sesji
- Session mailSession = Session.getDefaultInstance(props);
-
- // ustawienie debagowania, jeśli nie chcesz oglądać logów to usuń
- // linijkę poniżej lub zmień wartość na false
- mailSession.setDebug(true);
-
- // Tworzenie wiadomości email
- MimeMessage message = new MimeMessage(mailSession);
- message.setSubject(SUBJECT);
- message.setContent(CONTENT, "text/plain; charset=ISO-8859-2");
- message.addRecipient(Message.RecipientType.TO, new InternetAddress(TO));
-
- Transport transport = mailSession.getTransport();
- transport.connect(HOST, PORT, FROM, password);
-
- // wysłanie wiadomości
- transport.sendMessage(message, message
-   .getRecipients(Message.RecipientType.TO));
- transport.close();
-}
-}
+			 // wysłanie wiadomości
+			 transport.sendMessage(message, message.getRecipients(Message.RecipientType.TO));
+			 transport.close();
+			}
+		}
 
 #CLASS Test1
 
@@ -131,6 +122,6 @@ public void send() throws MessagingException {
 						}
 		});
 	}
-}
+	}
 
 
