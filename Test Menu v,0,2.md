@@ -330,14 +330,14 @@
                      zdarzenie.getX(), zdarzenie.getY());
             }
          });
-   } 
-	   public static final int SZEROKOSC = 600;
-	   public static final int WYSOKOSC = 400;
-	   private JMenuItem elemZapisz;
-	   private JMenuItem elemZapiszJako;
-	   private JCheckBoxMenuItem elemTylkoDoOdczytu;
-	   private JPopupMenu kontekst;
-	
+	 } 
+		   public static final int SZEROKOSC = 600;
+		   public static final int WYSOKOSC = 400;
+		   private JMenuItem elemZapisz;
+		   private JMenuItem elemZapiszJako;
+		   private JCheckBoxMenuItem elemTylkoDoOdczytu;
+		   private JPopupMenu kontekst;
+		
 	   /**
 	      aktualizuje stan menu Plik. Opcja Zapisz jest wylaczana
 	      jezeli dokument znajduje sie w trybie "Tylko do odczytu"
