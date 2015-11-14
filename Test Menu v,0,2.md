@@ -331,42 +331,42 @@
             }
          });
    } 
-   public static final int SZEROKOSC = 600;
-   public static final int WYSOKOSC = 400;
-   private JMenuItem elemZapisz;
-   private JMenuItem elemZapiszJako;
-   private JCheckBoxMenuItem elemTylkoDoOdczytu;
-   private JPopupMenu kontekst;
-
-   /**
-      aktualizuje stan menu Plik. Opcja Zapisz jest wylaczana
-      jezeli dokument znajduje sie w trybie "Tylko do odczytu"
-   */
-   private class SluchaczMenuPlik implements MenuListener
-   {
-      public void menuSelected(MenuEvent zd)
-      {  
-         elemZapisz.setEnabled(!elemTylkoDoOdczytu.isSelected());
-         elemZapiszJako.setEnabled(!elemTylkoDoOdczytu.isSelected());
-      }
-      public void menuDeselected(MenuEvent zd) {}
-      public void menuCanceled(MenuEvent zd) {}
-   }
-}
-
-/**
-   Przykladowe dzialanie, przesylajace nazwe do System.out.
-*/
-class DzialanieTestowe extends AbstractAction
-{  
-   public DzialanieTestowe(String nazwa) { super(nazwa); }
-   
-   public void actionPerformed(ActionEvent zdarzenie)
-   {  
-      System.out.println("Zostal wybrany element " + getValue(Action.NAME)
-         + ".");
-   }
-}
+	   public static final int SZEROKOSC = 600;
+	   public static final int WYSOKOSC = 400;
+	   private JMenuItem elemZapisz;
+	   private JMenuItem elemZapiszJako;
+	   private JCheckBoxMenuItem elemTylkoDoOdczytu;
+	   private JPopupMenu kontekst;
+	
+	   /**
+	      aktualizuje stan menu Plik. Opcja Zapisz jest wylaczana
+	      jezeli dokument znajduje sie w trybie "Tylko do odczytu"
+	   */
+	   private class SluchaczMenuPlik implements MenuListener
+	   {
+	      public void menuSelected(MenuEvent zd)
+	      {  
+	         elemZapisz.setEnabled(!elemTylkoDoOdczytu.isSelected());
+	         elemZapiszJako.setEnabled(!elemTylkoDoOdczytu.isSelected());
+	      }
+	      public void menuDeselected(MenuEvent zd) {}
+	      public void menuCanceled(MenuEvent zd) {}
+	   }
+	}
+	
+	/**
+	   Przykladowe dzialanie, przesylajace nazwe do System.out.
+	*/
+	class DzialanieTestowe extends AbstractAction
+	{  
+	   public DzialanieTestowe(String nazwa) { super(nazwa); }
+	   
+	   public void actionPerformed(ActionEvent zdarzenie)
+	   {  
+	      System.out.println("Zostal wybrany element " + getValue(Action.NAME)
+	         + ".");
+	   }
+	}
 
 	public class TestMenu
 	{
