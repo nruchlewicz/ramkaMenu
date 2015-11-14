@@ -304,23 +304,17 @@
                  });
          }
       });
-   
 
       // dolacz menu najwyzszego poziomu do paska menu
-
       JMenuBar pasekMenu = new JMenuBar();
       setJMenuBar(pasekMenu);
-
       pasekMenu.add(menuPlik);
       pasekMenu.add(menuEdycji);
       pasekMenu.add(menuPomocy);
-
       // demonstruj menu kontekstowe
-
       kontekst = new JPopupMenu();
       kontekst.add(dzialWytnij);
       {
-
     	  textField.cut();
       }
       kontekst.add(dzialKopiuj);
@@ -338,9 +332,7 @@
          });
    } 
    public static final int SZEROKOSC = 600;
-   public static final int WYSOKOSC = 400; 
-   
-
+   public static final int WYSOKOSC = 400;
    private JMenuItem elemZapisz;
    private JMenuItem elemZapiszJako;
    private JCheckBoxMenuItem elemTylkoDoOdczytu;
@@ -357,13 +349,10 @@
          elemZapisz.setEnabled(!elemTylkoDoOdczytu.isSelected());
          elemZapiszJako.setEnabled(!elemTylkoDoOdczytu.isSelected());
       }
-
       public void menuDeselected(MenuEvent zd) {}
-      
       public void menuCanceled(MenuEvent zd) {}
    }
 }
-
 
 /**
    Przykladowe dzialanie, przesylajace nazwe do System.out.
@@ -379,49 +368,42 @@ class DzialanieTestowe extends AbstractAction
    }
 }
 
-public class TestMenu
-{
-   {  
-      RamkaMenu ramka = new RamkaMenu();
-      ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      ramka.setVisible(true);
-      final JTextField textField = new JTextField(15);
-      JButton buttonCut = new JButton("Wytnij");
-      JButton buttonPaste = new JButton("Wklej");
-      JButton buttonCopy = new JButton("Kopiuj");
-
-
-        ramka.setLayout(new FlowLayout());
-    //  jfrm.setSize(230, 150);
-    //  jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-      buttonCut.addActionListener(new ActionListener() {
-  public void actionPerformed(ActionEvent le) {
-          textField.cut();
-        }
-      });
-
-      buttonPaste.addActionListener(new ActionListener() {
-  public void actionPerformed(ActionEvent le) {
-          textField.paste();
-        }
-      });
-
-      buttonCopy.addActionListener(new ActionListener() {
-  public void actionPerformed(ActionEvent le) {
-          textField.copy();
-        }
-      });
-    
-      ramka.add(textField);
-      ramka.add(buttonCut);
-      ramka.add(buttonPaste);
-      ramka.add(buttonCopy);
-      ramka.setVisible(true);
-    }
-
-}
-
+	public class TestMenu
+	{
+	   {  
+	      RamkaMenu ramka = new RamkaMenu();
+	      ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	      ramka.setVisible(true);
+	      final JTextField textField = new JTextField(15);
+	      JButton buttonCut = new JButton("Wytnij");
+	      JButton buttonPaste = new JButton("Wklej");
+	      JButton buttonCopy = new JButton("Kopiuj");
+	        ramka.setLayout(new FlowLayout());
+	    //  jfrm.setSize(230, 150);
+	    //  jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	      buttonCut.addActionListener(new ActionListener() {
+	  public void actionPerformed(ActionEvent le) {
+	          textField.cut();
+	        }
+	      });
+	      buttonPaste.addActionListener(new ActionListener() {
+	  public void actionPerformed(ActionEvent le) {
+	          textField.paste();
+	        }
+	      });
+	      buttonCopy.addActionListener(new ActionListener() {
+	  public void actionPerformed(ActionEvent le) {
+	          textField.copy();
+	        }
+	      });
+	      ramka.add(textField);
+	      ramka.add(buttonCut);
+	      ramka.add(buttonPaste);
+	      ramka.add(buttonCopy);
+	      ramka.setVisible(true);
+	    }
+	}
+	
 
 
 
