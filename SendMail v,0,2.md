@@ -1,7 +1,7 @@
 _Asia Powinna być dumna!_
 
 #CLASS OKNO
-
+```java
 	import javax.mail.MessagingException;
 	import javax.swing.JButton;
 	import javax.swing.JFrame;
@@ -56,10 +56,11 @@ _Asia Powinna być dumna!_
 			setVisible(true);
 		}
 	}
-	
+```
+
 #CLASS SendMail
 
-
+```java
 	import java.util.Properties;
 	import javax.mail.Message;
 	import javax.mail.MessagingException;
@@ -106,9 +107,10 @@ _Asia Powinna być dumna!_
 			 transport.close();
 			}
 		}
+```
 
 #CLASS Test1
-
+```java
 	import java.awt.EventQueue;
 	import javax.mail.MessagingException;
 
@@ -123,5 +125,4 @@ _Asia Powinna być dumna!_
 		});
 	}
 	}
-
-
+```
