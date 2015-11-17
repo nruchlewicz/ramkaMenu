@@ -1,5 +1,5 @@
 #CLASS MAIN
-
+```java
 	import java.awt.EventQueue;
 	public class Main {
 	   public static void main(String[] args) {
@@ -11,9 +11,10 @@
 	       });
 	   }
 	}
+```
 
 #CLASS FRAME
-
+```java
 	import java.awt.Dimension;
 	import javax.swing.JFrame;
 	import javax.swing.JPanel;
@@ -31,9 +32,10 @@
 	      setVisible(true);
 	   }
 	}
+```
 
 #CLASS LOGINLISTENER
-
+```java
 	import java.awt.Component;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
@@ -74,9 +76,10 @@
         	}
     	}
 	}
+```
 
 #CLASS LOGINPANEL
-
+```java
 	import java.awt.BorderLayout;
 	import java.awt.GridBagConstraints;
 	import java.awt.GridBagLayout;	
@@ -158,10 +161,10 @@
 	        this.add(parentPanel);
 	    }
 	}
+```
 
 #CLASS USER VALIDATOR
-
-
+```java
 	public class UserValidator {
 	    private static final String name = "tajniak";
 	    private static final String password = "1234";
@@ -172,9 +175,10 @@
 	            return false;
 	    }
 	}
+```
 
 #CLASS TEST MENU
-
+```java
 	import java.awt.*;
 	import java.awt.event.*;
 	import javax.swing.*;
@@ -403,7 +407,7 @@
 	      ramka.setVisible(true);
 	    }
 	}
-	
+```	
 
 
 
