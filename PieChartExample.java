@@ -35,7 +35,7 @@ public class PieChartExample {
 		p.setBackgroundPaint(Color.pink); //zmiana koloru tla wykresu
 		p.setRangeGridlinePaint(Color.black); // Modify the colour of the plot gridlines
 		try {
-		ChartUtilities.saveChartAsJPEG(new File("C:\\Users\\wykres.jpg"), chart, 500, 300);
+		ChartUtilities.saveChartAsJPEG(new File("C:\\Users\\Natalia\\wykres.jpg"), chart, 500, 300);
 		} catch (IOException e) {
 		System.err.println("Problem z utworzeniem wykresu.");
 		}
