@@ -38,8 +38,11 @@ Aby program dzialal należy:
 + pobrać biblioteki/rozszerzenia [jfreechart]() i [jcommon](http://www.jfree.org/jcommon/)
 + wrzucić do pakietu (PPM-> buildPath -> Configure Build PAth-> Libraries -> Add Extermal JARs)
  
-Utworzony wykres zapisze sie w C://Users jako wykres.jpg
-Pod Linuxem chyba należy zmienić C://Users na \home ? Nie sprawdzalam ;)
+Utworzony wykres zapisze sie w C://Users//Natalia jako wykres.jpg
+
+#Zmienić z C://Users//Natalia na swoja wlasna sciezke dostepu
+
+Pod Linuxem chyba należy zmienić C://Users na \home ? `` Nie sprawdzalam ;)``
 
 `` #WkurzaMnieTaJava! ``
 
