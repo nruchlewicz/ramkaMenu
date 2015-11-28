@@ -35,7 +35,7 @@ Utworzyam klase do tworzenia ststystyk ww postaci wykresu.
 Na razie trzeba podać z klawiatury ilosć "glosów", później program powinein pobierać te dane z bazy danych.
 
 Aby program dzialal należy:
-+ pobrać biblioteki/rozszerzenia [jfreechart]() i [jcommon](http://www.jfree.org/jcommon/)
++ pobrać biblioteki/rozszerzenia [jfreechart](http://www.jfree.org/jfreechart/) i [jcommon](http://www.jfree.org/jcommon/)
 + wrzucić do pakietu (PPM-> buildPath -> Configure Build PAth-> Libraries -> Add Extermal JARs)
  
 Utworzony wykres zapisze sie w C://Users//Natalia jako wykres.jpg
